@@ -7,7 +7,7 @@ package io.dapr.it.actor;
 import io.dapr.client.DaprClient;
 import io.dapr.client.DaprClientBuilder;
 import io.dapr.exceptions.DaprException;
-import io.dapr.it.BaseIT;
+import io.dapr.it.BaseIntegrationTest;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ import org.junit.Test;
  * <p>
  * Requires Dapr running.
  */
-public class DaprHttpAsyncClientIT extends BaseIT {
+public class DaprHttpAsyncClientIT extends BaseIntegrationTest {
 
   /**
    * Checks if the error is correctly parsed when trying to invoke a function on

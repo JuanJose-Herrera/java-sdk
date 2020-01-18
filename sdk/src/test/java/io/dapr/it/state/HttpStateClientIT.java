@@ -9,7 +9,7 @@ import io.dapr.client.DaprClient;
 import io.dapr.client.DaprClientBuilder;
 import io.dapr.client.domain.StateKeyValue;
 import io.dapr.client.domain.StateOptions;
-import io.dapr.it.BaseIT;
+import io.dapr.it.BaseIntegrationTest;
 import io.dapr.it.services.EmptyService;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -19,7 +19,7 @@ import reactor.core.publisher.Mono;
 /**
  * Test State HTTP DAPR capabilities using a DAPR instance with an empty service running
  */
-public class HttpStateClientIT extends BaseIT {
+public class HttpStateClientIT extends BaseIntegrationTest {
 
   @BeforeClass
   public static void init() throws Exception {

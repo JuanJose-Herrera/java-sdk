@@ -7,7 +7,7 @@ package io.dapr.it.state;
 
 import io.dapr.DaprGrpc;
 import io.dapr.DaprProtos;
-import io.dapr.it.BaseIT;
+import io.dapr.it.BaseIntegrationTest;
 import io.dapr.it.DaprIntegrationTestingRunner;
 import io.dapr.it.services.HelloWorldGrpcStateService;
 import io.grpc.ManagedChannel;
@@ -18,7 +18,7 @@ import org.junit.Test;
 
 import static io.dapr.it.DaprIntegrationTestingRunner.DAPR_FREEPORTS;
 
-public class HelloWorldClientIT extends BaseIT {
+public class HelloWorldClientIT extends BaseIntegrationTest {
 
   private static DaprIntegrationTestingRunner daprIntegrationTestingRunner;
 

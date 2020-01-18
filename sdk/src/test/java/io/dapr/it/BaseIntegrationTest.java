@@ -14,7 +14,7 @@ import java.util.Optional;
 
 import static io.dapr.it.DaprIntegrationTestingRunner.DAPR_FREEPORTS;
 
-public class BaseIT {
+public class BaseIntegrationTest {
 
   protected static DaprIntegrationTestingRunner daprIntegrationTestingRunner;
 
