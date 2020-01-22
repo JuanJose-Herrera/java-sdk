@@ -49,6 +49,7 @@ public class DaprIntegrationTestingRunner {
     proc= rt.exec(daprCommand);
 
     System.out.println("**** after rt.exec()");
+    L
     final Runnable stuffToDo = new Thread(() -> {
       try {
         try (InputStream stdin = proc.getInputStream()) {
