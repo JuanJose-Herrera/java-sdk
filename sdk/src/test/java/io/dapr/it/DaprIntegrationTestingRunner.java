@@ -48,6 +48,7 @@ public class DaprIntegrationTestingRunner {
     System.out.println(daprCommand);
     proc= rt.exec(daprCommand);
 
+    System.out.println("**** after rt.exec()");
     final Runnable stuffToDo = new Thread(() -> {
       try {
         try (InputStream stdin = proc.getInputStream()) {
@@ -73,7 +74,13 @@ public class DaprIntegrationTestingRunner {
     final Future future = executor.submit(stuffToDo);
     executor.shutdown(); // This does not cancel the already-scheduled task.
     future.get(1, TimeUnit.MINUTES);
-    Thread.sleep(sleepTime);
+    System.out.println("**** before sleep");
+    try {
+      Thread.sleep(sleepTime);
+    } catch(Exception e) {
+      System.out.println("**** caught e from sleep " + e);
+    }
+    System.out.println("**** after sleep");
     return DAPR_FREEPORTS;
   }
 

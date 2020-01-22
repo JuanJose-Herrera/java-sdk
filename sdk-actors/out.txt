@@ -1,0 +1,168 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] Inspecting build with total of 1 modules...
+[[1;34mINFO[m] Installing Nexus Staging features:
+[[1;34mINFO[m]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mio.dapr:dapr-sdk-actors[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding dapr-sdk-actors 0.2.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.4:prepare-agent[m [1m(default-prepare-agent)[m @ [36mdapr-sdk-actors[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/lemai/.m2/repository/org/jacoco/org.jacoco.agent/0.8.4/org.jacoco.agent-0.8.4-runtime.jar=destfile=/home/lemai/java-sdk/sdk-actors/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mdapr-sdk-actors[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/lemai/java-sdk/sdk-actors/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mdapr-sdk-actors[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mdapr-sdk-actors[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /home/lemai/java-sdk/sdk-actors/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mdapr-sdk-actors[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 29 source files to /home/lemai/java-sdk/sdk-actors/target/test-classes
+[[1;33mWARNING[m] /home/lemai/java-sdk/sdk-actors/src/test/java/io/dapr/actors/runtime/ThrowFromPreAndPostActorMethodsTest.java: Some input files use unchecked or unsafe operations.
+[[1;33mWARNING[m] /home/lemai/java-sdk/sdk-actors/src/test/java/io/dapr/actors/runtime/ThrowFromPreAndPostActorMethodsTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mdapr-sdk-actors[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /home/lemai/java-sdk/sdk-actors/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running io.dapr.actors.it.ActorIT
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.junit.contrib.java.lang.system.EnvironmentVariables (file:/home/lemai/.m2/repository/com/github/stefanbirkner/system-rules/1.19.0/system-rules-1.19.0.jar) to field java.util.Collections$UnmodifiableMap.m
+WARNING: Please consider reporting this to the maintainers of org.junit.contrib.java.lang.system.EnvironmentVariables
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+**********Enter init
+********** init, calling initializeDapr
+dapr run --app-id e1af9618-18f7-4548-8d87-f6138099c326  -- mvn exec:java -Dexec.mainClass=io.dapr.actors.services.DemoActorService -Dexec.classpathScope=test -Dexec.args="39225"
+ℹ️  Starting Dapr with id e1af9618-18f7-4548-8d87-f6138099c326. HTTP Port: 38215. gRPC Port: 34685
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="starting Dapr Runtime -- version 0.3.0 -- commit v0.3.0-rc.0-1-gfe6c306-dirty"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="log level set to: info"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="standalone mode configured"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="dapr id: e1af9618-18f7-4548-8d87-f6138099c326"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="loaded component messagebus (pubsub.redis)"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="loaded component statestore (state.redis)"
+== DAPR == 2020-01-22 14:30:57.517930 I | redis: connecting to localhost:6379
+== DAPR == 2020-01-22 14:30:57.518919 I | redis: connected to localhost:6379 (localAddr: [::1]:59030, remAddr: [::1]:6379)
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="Initialized service discovery to standalone"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=warning msg="failed to init input bindings: app channel not initialized"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="actors: starting connection attempt to placement service at localhost:50005"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="http server is running on port 38215"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="gRPC server is running on port 34685"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="local service entry announced"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 4.135939ms"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="actors: established connection to placement service at localhost:50005"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="actors: placement order received: lock"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="actors: placement order received: update"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="actors: placement tables updated"
+== DAPR == time="2020-01-22T14:30:57-08:00" level=info msg="actors: placement order received: unlock"
+== APP == WARNING: An illegal reflective access operation has occurred
+== APP == WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+== APP == WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+== APP == WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+== APP == WARNING: All illegal access operations will be denied in a future release
+== APP == [[1;34mINFO[m] Scanning for projects...
+== APP == [[1;34mINFO[m] Inspecting build with total of 1 modules...
+== APP == [[1;34mINFO[m] Installing Nexus Staging features:
+== APP == [[1;34mINFO[m]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+== APP == [[1;34mINFO[m] 
+== APP == [[1;34mINFO[m] [1m----------------------< [0;36mio.dapr:dapr-sdk-actors[0;1m >-----------------------[m
+== APP == [[1;34mINFO[m] [1mBuilding dapr-sdk-actors 0.2.0-SNAPSHOT[m
+== APP == [[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+== APP == [[1;34mINFO[m] 
+== APP == [[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.6.0:java[m [1m(default-cli)[m @ [36mdapr-sdk-actors[0;1m ---[m
+== APP == Hello from DemoActorService main()
+== APP == ...port is 39225
+== APP == 14:31:01.006 [io.dapr.actors.services.DemoActorService.main()] INFO org.springframework.core.KotlinDetector - Kotlin reflection implementation not found at runtime, related features won't be available.
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::        (v2.2.2.RELEASE)
+== APP == 
+== APP == 2020-01-22 14:31:01.345  INFO 18728 --- [rService.main()] i.dapr.actors.services.DemoActorService  : Starting DemoActorService on maru with PID 18728 (/home/lemai/java-sdk/sdk-actors/target/test-classes started by lemai in /home/lemai/java-sdk/sdk-actors)
+== APP == 2020-01-22 14:31:01.347  INFO 18728 --- [rService.main()] i.dapr.actors.services.DemoActorService  : No active profile set, falling back to default profiles: default
+== APP == 2020-01-22 14:31:01.396  WARN 18728 --- [kground-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+== APP == 2020-01-22 14:31:02.176  INFO 18728 --- [rService.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 39225 (http)
+== APP == 2020-01-22 14:31:02.186  INFO 18728 --- [rService.main()] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2020-01-22 14:31:02.187  INFO 18728 --- [rService.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+== APP == 2020-01-22 14:31:02.242  INFO 18728 --- [rService.main()] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2020-01-22 14:31:02.242  INFO 18728 --- [rService.main()] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 830 ms
+== APP == 2020-01-22 14:31:02.531  INFO 18728 --- [rService.main()] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+== APP == 2020-01-22 14:31:02.727  INFO 18728 --- [rService.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 39225 (http) with context path ''
+== APP == 2020-01-22 14:31:02.731  INFO 18728 --- [rService.main()] i.dapr.actors.services.DemoActorService  : Started DemoActorService in 1.683 seconds (JVM running for 5.185)
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::        (v2.2.2.RELEASE)
+== APP == 
+== APP == 2020-01-22 14:31:02.745  INFO 18728 --- [rService.main()] i.dapr.actors.services.DemoActorService  : Starting DemoActorService on maru with PID 18728 (/home/lemai/java-sdk/sdk-actors/target/test-classes started by lemai in /home/lemai/java-sdk/sdk-actors)
+== APP == 2020-01-22 14:31:02.745  INFO 18728 --- [rService.main()] i.dapr.actors.services.DemoActorService  : No active profile set, falling back to default profiles: default
+== APP == 2020-01-22 14:31:02.915  WARN 18728 --- [rService.main()] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+== APP == 2020-01-22 14:31:02.917  INFO 18728 --- [rService.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+== APP == 2020-01-22 14:31:02.918  INFO 18728 --- [rService.main()] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2020-01-22 14:31:02.918  INFO 18728 --- [rService.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+== APP == 2020-01-22 14:31:02.927  INFO 18728 --- [rService.main()] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+== APP == 2020-01-22 14:31:02.927  INFO 18728 --- [rService.main()] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 179 ms
+== APP == 2020-01-22 14:31:02.989  INFO 18728 --- [rService.main()] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+== APP == 2020-01-22 14:31:03.032  INFO 18728 --- [rService.main()] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+== APP == 2020-01-22 14:31:03.042  INFO 18728 --- [rService.main()] ConditionEvaluationReportLoggingListener : 
+== APP == 
+== APP == Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+== APP == 2020-01-22 14:31:03.044 ERROR 18728 --- [rService.main()] o.s.b.d.LoggingFailureAnalysisReporter   : 
+== APP == 
+== APP == ***************************
+== APP == APPLICATION FAILED TO START
+== APP == ***************************
+== APP == 
+== APP == Description:
+== APP == 
+== APP == Web server failed to start. Port 8080 was already in use.
+== APP == 
+== APP == Action:
+== APP == 
+== APP == Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+== APP == 
+== APP == 2020-01-22 14:31:03.046  INFO 18728 --- [rService.main()] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+== APP == [[1;33mWARNING[m] 
+== APP == [1;31morg.springframework.boot.web.server.PortInUseException[m: [1;31mPort 8080 is already in use[m
+== APP ==     [1mat[m org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start ([1mTomcatWebServer.java:213[m)
+== APP ==     [1mat[m org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer ([1mServletWebServerApplicationContext.java:297[m)
+== APP ==     [1mat[m org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh ([1mServletWebServerApplicationContext.java:163[m)
+== APP ==     [1mat[m org.springframework.context.support.AbstractApplicationContext.refresh ([1mAbstractApplicationContext.java:553[m)
+== APP ==     [1mat[m org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh ([1mServletWebServerApplicationContext.java:141[m)
+== APP ==     [1mat[m org.springframework.boot.SpringApplication.refresh ([1mSpringApplication.java:747[m)
+== APP ==     [1mat[m org.springframework.boot.SpringApplication.refreshContext ([1mSpringApplication.java:397[m)
+== APP ==     [1mat[m org.springframework.boot.SpringApplication.run ([1mSpringApplication.java:315[m)
+== APP ==     [1mat[m org.springframework.boot.SpringApplication.run ([1mSpringApplication.java:1226[m)
+== APP ==     [1mat[m org.springframework.boot.SpringApplication.run ([1mSpringApplication.java:1215[m)
+== APP ==     [1mat[m io.dapr.actors.services.DemoActorService.main ([1mDemoActorService.java:57[m)
+== APP ==     [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 ([1mNative Method[m)
+== APP ==     [1mat[m jdk.internal.reflect.NativeMethodAccessorImpl.invoke ([1mNativeMethodAccessorImpl.java:62[m)
+== APP ==     [1mat[m jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke ([1mDelegatingMethodAccessorImpl.java:43[m)
+== APP ==     [1mat[m java.lang.reflect.Method.invoke ([1mMethod.java:566[m)
+== APP ==     [1mat[m org.codehaus.mojo.exec.ExecJavaMojo$1.run ([1mExecJavaMojo.java:282[m)
+== APP ==     [1mat[m java.lang.Thread.run ([1mThread.java:834[m)
+ℹ️  
+terminated signal received: shutting down
+== DAPR == time="2020-01-22T14:31:56-08:00" level=info msg="dapr shutting down. Waiting 5 seconds to finish outstanding operations"
+== DAPR == time="2020-01-22T14:31:56-08:00" level=info msg="stop command issued. Shutting down all operations"
+✅  Exited Dapr successfully
+✅  Exited App successfully
