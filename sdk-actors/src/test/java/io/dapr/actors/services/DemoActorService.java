@@ -48,12 +48,17 @@ public class DemoActorService {
     System.out.println("...port is " + args[0]);
   int port = Integer.parseInt(args[0]);
     // Register the Actor class.
+
+    System.out.println("...calling register");
     ActorRuntime.getInstance().registerActor(DemoActorImpl.class, new DefaultObjectSerializer());
 
+    System.out.println("...calling DaprApplication.start");
     // Start Dapr's callback endpoint.
     DaprApplication.start(port);
 
+    System.out.println("...calling SpringApplication.run()");
     // Start application's endpoint.
     SpringApplication.run(DemoActorService.class);
+    System.out.println("...returned from SpringApplication.run()");
   }
 }
